@@ -41,14 +41,14 @@ with open("./week_" + current_week + "/players_of_the_week_" + current_week + ".
       
     # image_filename = first_name + "_" + first_last_name + ".jpg"
     image_filename = "_".join(full_name) + ".jpg"
-    player_school = current_line_list[1]
-    school_state = current_line_list[2]
-    if current_line_list[2] == "Washington D.C.": school_state = "Washington, D.C."
-    player_conf = current_line_list[3]
-    school_division = current_line_list[4]
-    player_award = current_line_list[5]
-    award_date = current_line_list[6]
-    photo_credit = current_line_list[8]
+    player_school = current_line_list[2]
+    school_state = current_line_list[3]
+    if current_line_list[3] == "Washington D.C.": school_state = "Washington, D.C."
+    player_conf = current_line_list[4]
+    school_division = current_line_list[5]
+    player_award = current_line_list[6]
+    award_date = current_line_list[8]
+    photo_credit = current_line_list[10]
     
     single_player_list = [player_name, image_filename, player_school, school_state, player_conf, school_division, player_award, award_date, photo_credit]
     players_list.append(single_player_list)
