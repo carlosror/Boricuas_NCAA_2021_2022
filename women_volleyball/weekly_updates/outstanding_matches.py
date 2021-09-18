@@ -25,7 +25,7 @@ with open("./Conference_Logos/filesizes_png.csv") as f:
     conf_logos_dict[current_line_list[0]] = float(current_line_list[2]) / float (current_line_list[1])
     
 players_list = []
-current_week = "1"
+current_week = "2"
 with open("./week_" + current_week + "/outstanding_matches_week_" + current_week + ".csv") as f:
   next(f) # skip headers row
   for line in f:
@@ -152,7 +152,9 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
     else: player_name_ypos = player_banner_y + 4
     player_name = createText(100, player_name_ypos - 1, 514, 85)
     insertText(unicode(current_player[0]).upper() + "\n", -1, player_name)
-    setFont("Asimov Print C", player_name); setFontSize(30, player_name)
+    setFont("Asimov Print C", player_name)
+    if "Dariana" in current_player[0]: setFontSize(26, player_name)
+    else: setFontSize(30, player_name)
     name_length = getTextLength(player_name)
     player_school = current_player[2]
     school_length = len(player_school) + 1

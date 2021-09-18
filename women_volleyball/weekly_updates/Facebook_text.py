@@ -16,6 +16,7 @@ with open("./week_" + current_week + "/Facebook_text_week_" + current_week + ".t
       player_conf = current_line_list[4]
       school_division = current_line_list[5]
       player_award = current_line_list[7]
+      if "National" in current_line_list[6]: player_conf = school_division.replace("D", "División ")
       notes = current_line_list[11].replace("\n", "").replace('"', '')
       out.write(player_name + " (" + player_hometown + ", " + player_school + " en " + school_state + ", " + school_division + ") ")
       out.write("es nombrada " + player_award + " en la " + player_conf + ". ")
